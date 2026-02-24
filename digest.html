@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Digest - Job Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">Job Tracker</h1>
+            <div class="nav-links">
+                <a href="index.html">Jobs</a>
+                <a href="preferences.html">Preferences</a>
+                <a href="digest.html">Daily Digest</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="digest-controls">
+            <button id="generateDigest" class="btn btn-primary">Generate Today's 9AM Digest (Simulated)</button>
+            <p class="demo-note">Demo Mode: Daily 9AM trigger simulated manually.</p>
+        </div>
+
+        <div id="digestContent"></div>
+    </main>
+
+    <script src="digest.js"></script>
+</body>
+</html>

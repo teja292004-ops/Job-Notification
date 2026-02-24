@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KodNest Premium Build System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="kodnest-system.css">
+</head>
+<body>
+    
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-left">Project Alpha</div>
+        <div class="top-bar-center">Step 2 / 5</div>
+        <div class="top-bar-right">
+            <span class="status-badge in-progress">In Progress</span>
+        </div>
+    </div>
+
+    <!-- Context Header -->
+    <div class="context-header">
+        <h1>Build Your Authentication System</h1>
+        <p class="subtext">Set up secure user authentication with email verification and password reset.</p>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        
+        <!-- Primary Workspace -->
+        <div class="primary-workspace">
+            
+            <div class="card">
+                <h3>Configure Authentication</h3>
+                <p class="mb-md">Define how users will sign up and log in to your application.</p>
+                
+                <div class="input-group">
+                    <label class="input-label">Authentication Provider</label>
+                    <input type="text" class="input-field" placeholder="Email & Password">
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">Session Duration (hours)</label>
+                    <input type="number" class="input-field" value="24">
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">Additional Requirements</label>
+                    <textarea class="input-field" placeholder="Email verification required, password strength minimum 8 characters"></textarea>
+                </div>
+                
+                <button class="btn btn-primary">Save Configuration</button>
+            </div>
+
+            <div class="card">
+                <h3>User Flow Preview</h3>
+                <p>Your authentication flow will include the following steps:</p>
+                <ul style="margin-left: 24px; margin-top: 16px; line-height: 2;">
+                    <li>User enters email and password</li>
+                    <li>System validates credentials</li>
+                    <li>Email verification sent</li>
+                    <li>User confirms email</li>
+                    <li>Access granted</li>
+                </ul>
+            </div>
+
+            <div class="empty-state">
+                <h3>No Test Users Yet</h3>
+                <p>Create test users to verify your authentication flow works correctly.</p>
+                <button class="btn btn-secondary">Add Test User</button>
+            </div>
+
+        </div>
+
+        <!-- Secondary Panel -->
+        <div class="secondary-panel">
+            
+            <div class="panel-section">
+                <h3>Step Explanation</h3>
+                <p class="subtext">Authentication is the foundation of your application. This step configures how users prove their identity.</p>
+            </div>
+
+            <div class="panel-section">
+                <div class="prompt-box-header">
+                    <span class="prompt-box-title">Prompt</span>
+                    <button class="copy-btn" onclick="copyPrompt()">Copy</button>
+                </div>
+                <div class="prompt-box" id="promptContent">
+Create a secure authentication system with:
+- Email/password login
+- Email verification
+- Password reset flow
+- Session management (24h)
+- Rate limiting on login attempts
+                </div>
+            </div>
+
+            <div class="panel-section">
+                <div class="action-group">
+                    <button class="btn btn-primary">Build in Lovable</button>
+                    <button class="btn btn-success">It Worked</button>
+                    <button class="btn btn-warning">Report Error</button>
+                    <button class="btn btn-secondary">Add Screenshot</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Proof Footer -->
+    <div class="proof-footer">
+        <div class="proof-checklist">
+            <div class="proof-item">
+                <input type="checkbox" id="proof1">
+                <label for="proof1">UI Built</label>
+            </div>
+            <div class="proof-item">
+                <input type="checkbox" id="proof2">
+                <label for="proof2">Logic Working</label>
+            </div>
+            <div class="proof-item">
+                <input type="checkbox" id="proof3">
+                <label for="proof3">Test Passed</label>
+            </div>
+            <div class="proof-item">
+                <input type="checkbox" id="proof4">
+                <label for="proof4">Deployed</label>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copyPrompt() {
+            const promptText = document.getElementById('promptContent').textContent;
+            navigator.clipboard.writeText(promptText.trim());
+            
+            const btn = event.target;
+            btn.textContent = 'Copied';
+            setTimeout(() => {
+                btn.textContent = 'Copy';
+            }, 2000);
+        }
+    </script>
+
+</body>
+</html>
