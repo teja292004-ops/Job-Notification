@@ -1,0 +1,11 @@
+{
+  "name": "job-notification-tracker",
+  "version": "1.0.0",
+  "description": "Job Notification Tracker with Daily Digest Engine and KodNest Premium Build System",
+  "scripts": {
+    "start": "echo 'Static site - open index.html in browser'"
+  },
+  "keywords": ["job-tracker", "notification", "digest", "kodnest"],
+  "author": "",
+  "license": "MIT"
+}
